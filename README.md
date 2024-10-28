@@ -1,5 +1,17 @@
 # Icon Browser
 
+## ダウンロード
+
+このアプリケーションはバージョン管理にGit Large File Storageを利用している。
+git lfsを利用していない方は以下のリンクに従ってgit lfsをインストール。
+<https://github.com/git-lfs/git-lfs?utm_source=gitlfs_site&utm_medium=installation_link&utm_campaign=gitlfs#installing>
+
+以下のコマンドでソースコードおよび実行に必要なデータをダウンロード
+
+```bash
+    git lfs clone https://github.com/hodhodhod/icon-browser.git
+```
+
 ## 依存関係のインストール
 
 このアプリケーションはパッケージ管理にuvを利用している。
