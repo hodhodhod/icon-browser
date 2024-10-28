@@ -1,14 +1,14 @@
 import re
 from io import BytesIO
 from itertools import pairwise
+from pathlib import Path
 from time import sleep
 
 import requests
 from PIL import Image
 
-from src.icon_browser.infra.data_source.image_dir import IMAGE_DIR
-
 NOT_FOUND = 404
+IMAGE_DIR = Path("data/images")
 
 
 def download_images() -> None:
@@ -28,17 +28,17 @@ def download_images() -> None:
             icon_name = icon_match.group(1)
             var_name = var_match.group(1)
 
-            res = requests.get(
+            image_response = requests.get(
                 f"https://material-icons.github.io/material-icons-png/png/black/{icon_name}/baseline-4x.png",
                 timeout=1000,
             )
-            if res.status_code == NOT_FOUND:
+            if image_response.status_code == NOT_FOUND:
                 continue
 
-            image = Image.open(BytesIO(res.content))
-            background = Image.new("RGB", image.size, (255, 255, 255))
-            background.paste(image, mask=image.split()[3])
-            background.save(IMAGE_DIR / f"{var_name}.png")
+            transparent_image = Image.open(BytesIO(image_response.content))
+            image = Image.new("RGB", transparent_image.size, (255, 255, 255))
+            image.paste(transparent_image, mask=transparent_image.split()[3])
+            image.save(IMAGE_DIR / f"{var_name}.png")
 
             sleep(0.01)
 

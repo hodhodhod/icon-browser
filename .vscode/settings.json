@@ -1,50 +1,46 @@
 {
-    "[python]": {
-        "editor.codeActionsOnSave": {
-            "source.fixAll.ruff": "explicit",
-            "source.organizeImports.ruff": "explicit"
-        },
-        "editor.defaultFormatter": "charliermarsh.ruff",
-        "editor.formatOnSave": true,
-        "editor.formatOnType": true,
-        "editor.tabSize": 4
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.ruff": "explicit",
+      "source.organizeImports.ruff": "explicit"
     },
-    "[toml]": {
-        "editor.defaultFormatter": "tamasfe.even-better-toml",
-        "editor.tabSize": 4
-    },
-    "[yaml]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[jsonc]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[markdown]": {
-        "editor.codeActionsOnSave": {
-            "source.fixAll.markdownlint": "explicit"
-        }
-    },
-    "python.analysis.autoFormatStrings": false,
-    "python.analysis.autoImportCompletions": true,
-    "python.analysis.diagnosticMode": "workspace",
-    "python.autoComplete.extraPaths": [
-        "${workspaceFolder}",
-        ".venv/lib/python3.*/site-packages"
-    ],
-    "python.defaultInterpreterPath": ".venv/bin/python",
-    "python.languageServer": "Default",
-    "evenBetterToml.formatter.arrayAutoCollapse": false,
-    "evenBetterToml.formatter.indentString": "    ",
-    "files.exclude": {
-        "**/.git": true,
-        "**/.svn": true,
-        "**/.hg": true,
-        "**/CVS": true,
-        "**/.DS_Store": true,
-        "**/Thumbs.db": true,
-        "**/.venv": true,
-        "**/.ruff_cache": true,
-        "**/__pycache__": true
-    },
-    "cSpell.diagnosticLevel": "Warning"
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.tabSize": 4
+  },
+  "[toml]": {
+    "editor.defaultFormatter": "tamasfe.even-better-toml",
+    "editor.tabSize": 4
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.markdownlint": "explicit"
+    }
+  },
+  "python.analysis.autoFormatStrings": false,
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.diagnosticMode": "workspace",
+  "python.autoComplete.extraPaths": [
+    "${workspaceFolder}",
+    ".venv/lib/python3.*/site-packages"
+  ],
+  "python.defaultInterpreterPath": ".venv/bin/python",
+  "python.languageServer": "Default",
+  "evenBetterToml.formatter.arrayAutoCollapse": false,
+  "evenBetterToml.formatter.indentString": "    ",
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/.venv": true,
+    "**/.ruff_cache": true,
+    "**/__pycache__": true
+  }
 }
