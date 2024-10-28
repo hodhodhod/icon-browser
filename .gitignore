@@ -10,5 +10,6 @@ wheels/
 
 
 # data
-data/*
+data/images/*
+
 
